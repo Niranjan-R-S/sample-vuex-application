@@ -16,7 +16,7 @@
                 v-bind:class="{'is-complete': todo.completed}"
                 v-on:dblclick="updateTodo(todo)">
                 {{todo.title}}
-                <i class="fas fa-trash-alt" v-on:click="deleteTodo(todo.id)"></i>
+                <button v-on:click="deleteTodo(todo.id)" class="del">x</button>
             </div>
         </div>
     </div>
@@ -53,7 +53,7 @@ export default {
         position: relative;
         cursor: pointer;
     }
-    i{
+    .del{
         position: absolute;
         bottom: 10px;
         right: 10px;
